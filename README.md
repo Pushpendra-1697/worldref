@@ -6,7 +6,7 @@ This React onboarding project includes pages for login, signup, home, and profil
 
 ## Verecel Deployed Link 🔗
 ```bash
-
+https://worldref-murex.vercel.app
 ```
 
 ## Installation steps / How to run locally ? ✌️
@@ -56,6 +56,7 @@ Use this Credentials to Login.
 - Private routes: /, /deals, /details, /recipesDetails
 - maintained auth and recipes states by redux
 - authentication status is updated according to authenticated and non-authenticated users
+- Implemented cypress testing
 
 ## Additional Feature 😊
 - User can see recipe details page also.
