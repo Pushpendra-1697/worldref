@@ -1,7 +1,6 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from "./actionTypes";
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from "./actionTypes";
 
 const token = localStorage.getItem("token") || '';
-
 const initialAuth = {
     isLoading: false,
     isError: false,
@@ -31,6 +30,13 @@ export const authReducer = (state = initialAuth, { type, payload }) => {
                 ...state,
                 isLoading: false,
                 isError: true
+            }
+        }
+        case LOGOUT: {
+            localStorage.removeItem('token');
+            return {
+                ...state,
+                isAuth: false,
             }
         }
         default: {

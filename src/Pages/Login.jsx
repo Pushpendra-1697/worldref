@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 export const Login = () => {
   const [loginCreds, setLoginCreds] = useState({});
   const dispatch = useDispatch();
-  const { isAuth } = useSelector((store) => store.authManager);
+  const { isAuth, isLoading, isError } = useSelector((store) => store.authManager);
   const navigate = useNavigate();
   const { state } = useLocation();
 
@@ -15,7 +15,7 @@ export const Login = () => {
     if (isAuth) {
       if (state?.from) {
         navigate(state.from, { replace: true });
-      }else {
+      } else {
         navigate('/');
       }
     }
@@ -31,6 +31,9 @@ export const Login = () => {
   const handleSubmit = () => {
     dispatch(login(loginCreds));
   };
+  if (isError) {
+    return (<h1>Somthing went wrong!! pls Refresh😒</h1>);
+  };
   return (
     <DIV>
       <h2>Log In</h2>
@@ -42,7 +45,7 @@ export const Login = () => {
         name="password"
         onChange={hanldeChange}
       />
-      <button onClick={handleSubmit} data-testid="user-login">Log In</button>
+      <button onClick={handleSubmit} data-testid="user-login">{isLoading ? 'Loading...' : 'Log In'}</button>
       * NOTE:: LOGIN with Reqres Credentials
     </DIV>
   );

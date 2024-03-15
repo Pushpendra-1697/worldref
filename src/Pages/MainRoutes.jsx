@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import Deals from "./Deals";
 import Details from "./Details";
 
+// fix end points for routes/pages
 export const MainRoutes = () => {
   return (
     <Routes>
