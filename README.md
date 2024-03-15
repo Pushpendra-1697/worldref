@@ -28,10 +28,9 @@ Then do the following steps:
 
 ## Tech Stacks 🏠
 
-### A) Frontend :
 React (JSX Syntax), Redux, HTML-CSS-JS, Authentication, Axios for handling asynchronous requests, react-router-dom for routing or Navigate from one page to another, Standard react components, and React-hooks.
 
-## Demo Signup Credentials 🧪
+## Demo Login Credentials 🧪
 Use this Credentials to Login.
 
 ``Email: eve.holt@reqres.in``
