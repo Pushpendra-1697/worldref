@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import { authReducer } from "./AuthReducer/reducer";
 import { recipeReducer } from "./RecipeReducer/reducer";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 
 const rootReducer = combineReducers({
   authManager: authReducer,
@@ -9,3 +9,4 @@ const rootReducer = combineReducers({
 });
 
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
+

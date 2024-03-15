@@ -3,7 +3,7 @@ import { RECIPE_REQUEST_FAILURE, RECIPE_REQUEST_PENDING, RECIPE_REQUEST_SUCCESS 
 const initialRecipe = {
     isLoading: false,
     isError: false,
-    recipe: [],
+    recipe: []
 };
 export const recipeReducer = (state = initialRecipe, { type, payload }) => {
     switch (type) {
