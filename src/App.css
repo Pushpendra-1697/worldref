@@ -2,6 +2,11 @@
   text-align: center;
   font-family: 'Poppins';
 }
+.recipe-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -11,6 +16,30 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 1200px) {
+  .recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+  .recipe-list{
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .recipe-list{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

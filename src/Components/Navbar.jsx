@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <DIV>
-      <h2>Recipe App</h2>
+      <h2 className="logo">Recipe App</h2>
       <Link to={"/"}>Home</Link>
       <Link to={"/login"}>Login</Link>
       <Link to={'/dashboard'}>Dashboard</Link>
@@ -24,6 +24,6 @@ const DIV = styled.div`
   border-bottom: 1px solid gray;
   gap: 20px;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
   box-shadow: 2px 2px 2px gray;
 `;

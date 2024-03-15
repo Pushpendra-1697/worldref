@@ -14,7 +14,7 @@ export const RecipeList = () => {
     <div style={{ padding: '10px', width: '100%' }}>
       {isLoading && <h1>Loading.....</h1>}
       {isError && <h1>Error.....</h1>}
-      <div data-testid="recipe-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: '20px' }}>
+      <div data-testid="recipe-list" className="recipe-list">
         {recipe && recipe.map(({ id, category, image, ingredients, name, price, type }) =>
           <RecipeCard key={id} id={id} category={category} image={image} ingredients={ingredients} name={name} price={price} type={type} />
         )}
