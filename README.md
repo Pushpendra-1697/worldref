@@ -8,6 +8,10 @@ This React onboarding project includes pages for login, signup, home, and profil
 ```bash
 https://worldref-murex.vercel.app
 ```
+## JSON Mock data 🔗
+```bash
+https://blog-database-p9we.vercel.app/recipe
+```
 
 ## Installation steps / How to run locally? ✌️
 
